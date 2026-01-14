@@ -21,4 +21,5 @@ Route::post('/posts', [PostController::class, 'store']);
 Route::get('/posts/{post}/edit', [PostController::class, 'edit']);
 Route::put('/posts/{post}', [PostController::class, 'update']);
 Route::resource('posts', PostController::class);
+Route::delete('/posts/{post}', [PostController::class, 'delete']);
 // '/posts/{対象データID}'にGetリクエストが来たら、PostControllerのshowメソッドを実行する
